@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+/* Reset some default styles for lists and anchors */
+ul li{
+    list-style-type: none;
+    margin: 5px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Style the header and navigation */
+header {
+    background-color: #808080;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style the logo */
+h1 {
+    text-align: center;
+    color: black;
+}
+
+p{
+  text-align: center;
+    color: rgb(68, 68, 68);
+}
+
+/* Style the menu to be on the right */
+.menu {
+    display: flex;
+    justify-content: flex-end; /* Align the menu items to the right */
+}
+
+.menu li {
+    margin-left: 20px; /* Add space between menu items (you can adjust this) */
+}
+
+.menu li:first-child {
+    margin-left: 0; /* Remove margin from the first menu item */
+}
+
+.menu a {
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ffcc00; /* Change the color on hover */
+}
+
+.mobile-container {
+    max-width: 950px;
+    margin: auto;
+    background-color: #ececec;
+    height: 900px;
+    color: white;
+    border-radius: 10px;
+  }
+.gambar{
+  max-width: 45px;
+  max-height: 45px;
+}
+
+/* CAROUSEL */
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/* END CAROUSEL */
+
+.left{
+  width: 60%; float:left
+}
+.right{
+  width: 40%; float:right
+}
+
+/* FORM REGISTRASI */
+.form_contact{
+  padding: 10px;
+  margin: 5px;
+}
+
+h2{
+  font-size: 1.4rem;
+  color: #363636;
+  text-align: center;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.label_name{
+  font-size: 10px;
+  font-weight: 500px;
+  color: #363636;
+}
+
+.custom-list{
+  color: #363636;
+}
+
+/* Contact-chip */
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.kiri, .tengah, .kanan {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.content{
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Membagi halaman menjadi tiga kolom yang sama lebar */
+    gap: 20px; /* Jarak antara kolom */
+    width: 80%; /* Lebar kontainer */
+    margin: 0 auto; /* Pusatkan kontainer */
+}
+
+</style>
+<body>
+
+<!-- Simulate a smartphone / tablet look -->
+<div class="mobile-container">
+  <header>
+    <nav>
+        <div class="container">
+            <img class="gambar" src="asset/img/logo-milan.png" alt="">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Our Packet</a></li>
+                <li><a href="#">Call Us</a></li>
+            </ul>
+        </div>
+    </nav>
+  </header>
+
+  <div class="row">
+    <h1>Top Rated E-Groceries Shop in <br> Indonesian</h1>
+    <p>Every Day with best ingredients</p>
+    <div class="left">
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 2</div>
+          <img src="asset/img/ibrahimovic.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 2</div>
+          <img src="asset/img/ac_milan_1.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+      </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <!-- <div class="row">
+          <i style="color: #363636;" class="fa fa-user-circle-o" aria-hidden="true"> Florence Hughes <br><span>bu Rumah Tangga, 28</span></i>
+          <p>Use this space to provide users with more information about your offer. 
+            Consider it a follow-up to your headline and explain the benefits of your service or product
+          </p>
+          <ul class="custom-list">
+            <li>1. Your first feature, written in the form of a benefit statement.</li>
+            <li>2. Your second feature, written in the form of a benefit statement</li>
+            <li>3. Your third feature, written in the form of a benefit statement</li>
+          </ul>
+        </div> -->
+        
+    </div>
+    <div class="right">
+      <h2>Contact Us</h2>
+      <span style="font-size: 10px; color: #717171;">Sales akan menghubungi anda 1x24 Jam setelah data kami terima.</span>
+      <div class="form_contact">
+        <form action="/action_page.php">
+          <label class="label_name" for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label class="label_name" for="email">Email <Address></Address></label>
+          <input type="text" id="email" name="email" placeholder="Email Address">
+          
+          <label class="label_name" for="country">What are you interested in?</label>
+          <select id="country" name="country">
+            <option value="australia">ibrahimovic</option>
+            <option value="canada">Pulisic</option>
+            <option value="usa">Musa</option>
+          </select>
+        
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br><br>
+<h1>Our Package</h1>
+<br><br><br><br>
+<div class="content">
+    <div class="row">
+      <div class="kiri">Kolom Kiri</div>
+        <div class="tengah">Kolom Tengah</div>
+        <div class="kanan">Kolom Kanan</div>
+    </div>
+</div>
+
+<div class="mobile-container">
+  <h1>Your Closing Argument Headline</h1>
+  <p>Suspendisse egestas rhoncus urna in bibendum. Donec urna neque, 
+    euismod sed justo quis, convallis tincidunt risus. Phasellus fringilla odio vel erat fringilla,</p>
+    <input type="submit" value="Submit">
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+// Carousel
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+// end carousel
+</script>
+
+
+
+
+</body>
+</html>
